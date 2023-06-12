@@ -2,11 +2,13 @@ const express = require('express')
 const bodyParser = require("body-parser")
 const app = express()
 // const date = require(__dirname + "/date.js")
-const port = process.env.PORT
 const mongoose = require("mongoose")
-
 const items = ["cook"];
 const workItems = []
+
+let port = process.env.PORT
+if(port == null || port == "") {
+port = 3000}
 
 app.use(bodyParser.urlencoded({ extended: true }))
 
