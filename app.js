@@ -6,7 +6,7 @@ const mongoose = require("mongoose")
 const items = ["cook"];
 const workItems = []
 
-let port = process.env.PORT
+let port = process.env
 if(port == null || port == "") {
 port = 3000}
 
